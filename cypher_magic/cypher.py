@@ -72,18 +72,6 @@ class CypherMagic(Magics):
             response = _response.to_table()
         elif output_type=='raw':
             response = _response
-        elif output_type=='graph':
-            try:
-                import networkx
-                import matplotlib
-
-                g = _response.data()
-                
-                response = networkx.draw(g)
-            except ModuleNotFoundError:
-                warn("You need to install networkx to return a matrix.")
-                response = None
-        
         else:
             response = _response.to_data_frame()
 
