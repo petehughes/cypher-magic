@@ -9,16 +9,17 @@ Load the magic with:
 `%load_ext cypher_magic`
 
 The magic allows you to run Cypher commands against the connected database using default credentials
-You can set the host name of the neo4j using the `-s`/`--server` variable. default is `localhost`
-You can set the username with the `-u`/`--userName` variable. default is `neo4j`
-You can change the password with the `-p`/`--password` variable.
-the `-q` flag suppresses the cell output.
-the `-o`/`--output` set the output type:
-`default`: `pandas` dataframe
-`raw`: response from the `py2neo`
-`table`,
-`matrix` - requires `sympy`
-`graph`
+
+- You can set the host name of the neo4j using the `-s`/`--server` variable. default is `localhost`
+- You can set the username with the `-u`/`--userName` variable. default is `neo4j`
+- You can change the password with the `-p`/`--password` variable.
+- the `-q` flag suppresses the cell output.
+- the `-o`/`--output` set the output type:
+  - `default`: `pandas` dataframe
+  - `raw`: response from the `py2neo`
+  - `table`,
+  - `matrix` - requires `sympy`
+  - `graph`
 
 ```
 %cypher -r
